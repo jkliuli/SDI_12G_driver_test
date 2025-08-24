@@ -1,0 +1,18 @@
+# system info pll_sys on 2024.12.30.20:33:27
+system_info:
+name,value
+DEVICE,10AX048H3F34E2SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for pll_sys on 2024.12.30.20:33:27
+files:
+filepath,kind,attributes,module,is_top
+sim/pll_sys.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,pll_sys,true
+altera_iopll_1931/sim/pll_sys_altera_iopll_1931_xggvo4y.vo,VERILOG,,pll_sys_altera_iopll_1931_xggvo4y,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+pll_sys.iopll_0,pll_sys_altera_iopll_1931_xggvo4y

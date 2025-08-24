@@ -1,0 +1,18 @@
+# system info clkctrl on 2024.12.30.20:33:18
+system_info:
+name,value
+DEVICE,10AX048H3F34E2SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for clkctrl on 2024.12.30.20:33:18
+files:
+filepath,kind,attributes,module,is_top
+sim/clkctrl.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,clkctrl,true
+altclkctrl_2000/sim/clkctrl_altclkctrl_2000_dpnsueq.v,VERILOG,,clkctrl_altclkctrl_2000_dpnsueq,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+clkctrl.altclkctrl_0,clkctrl_altclkctrl_2000_dpnsueq

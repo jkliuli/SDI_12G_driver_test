@@ -1,0 +1,34 @@
+# system info tx_pll on 2025.08.19.16:12:39
+system_info:
+name,value
+DEVICE,10AX048H3F34E2SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for tx_pll on 2025.08.19.16:12:39
+files:
+filepath,kind,attributes,module,is_top
+sim/tx_pll.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,tx_pll,true
+altera_xcvr_fpll_a10_191/sim/twentynm_xcvr_avmm.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor/twentynm_xcvr_avmm.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/alt_xcvr_resync.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_resync.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/altera_xcvr_fpll_a10.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor/altera_xcvr_fpll_a10.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/a10_avmm_h.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/alt_xcvr_native_avmm_nf.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/alt_xcvr_pll_embedded_debug.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/alt_xcvr_pll_avmm_csr.sv,SYSTEM_VERILOG,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_pll_embedded_debug.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_pll_avmm_csr.sv,SYSTEM_VERILOG_ENCRYPT,MENTOR_SPECIFIC,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/plain_files.txt,OTHER,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/mentor_files.txt,OTHER,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/cadence_files.txt,OTHER,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/synopsys_files.txt,OTHER,,altera_xcvr_fpll_a10,false
+altera_xcvr_fpll_a10_191/sim/aldec_files.txt,OTHER,,altera_xcvr_fpll_a10,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+tx_pll.tx_pll,altera_xcvr_fpll_a10

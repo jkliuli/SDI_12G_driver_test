@@ -1,0 +1,16 @@
+	component sdi_tx_sys_tx_phy is
+		port (
+			tx_analogreset    : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- tx_analogreset
+			tx_digitalreset   : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- tx_digitalreset
+			tx_cal_busy       : out std_logic_vector(0 downto 0);                      -- tx_cal_busy
+			tx_serial_clk0    : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- clk
+			tx_serial_data    : out std_logic_vector(0 downto 0);                      -- tx_serial_data
+			tx_coreclkin      : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- clk
+			tx_clkout         : out std_logic_vector(0 downto 0);                      -- clk
+			tx_pma_div_clkout : out std_logic_vector(0 downto 0);                      -- clk
+			tx_parallel_data  : in  std_logic_vector(127 downto 0) := (others => 'X'); -- tx_parallel_data
+			tx_control        : in  std_logic_vector(17 downto 0)  := (others => 'X'); -- tx_control
+			tx_enh_data_valid : in  std_logic_vector(0 downto 0)   := (others => 'X')  -- tx_enh_data_valid
+		);
+	end component sdi_tx_sys_tx_phy;
+

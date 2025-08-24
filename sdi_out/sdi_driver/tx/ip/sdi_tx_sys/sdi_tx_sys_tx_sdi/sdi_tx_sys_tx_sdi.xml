@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.08.20.21:05:07"
+ outputDirectory="C:/Users/clt/Desktop/U_12G_SDI/U_3GSDIx4_OUT_PCB1.0_v0.07_250815/U_3GSDIx4_OUT_PCB1.0_v0.07_250107/src/sdi_out/sdi_driver/tx/ip/sdi_tx_sys/sdi_tx_sys_tx_sdi/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Arria 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10AX048H3F34E2SG"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_TX_PCLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_TX_PCLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_TX_PCLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="tx_rst" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="tx_rst" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="tx_datain_valid" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_datain_valid" direction="input" role="export" width="1" />
+  </interface>
+  <interface name="tx_trs" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_trs" direction="input" role="export" width="1" />
+  </interface>
+  <interface name="tx_std" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_std" direction="input" role="export" width="3" />
+  </interface>
+  <interface name="tx_enable_ln" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_enable_ln" direction="input" role="export" width="1" />
+  </interface>
+  <interface name="tx_enable_crc" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_enable_crc" direction="input" role="export" width="1" />
+  </interface>
+  <interface name="tx_datain" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_datain" direction="input" role="export" width="80" />
+  </interface>
+  <interface name="tx_ln" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_ln" direction="input" role="export" width="44" />
+  </interface>
+  <interface name="tx_ln_b" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_ln_b" direction="input" role="export" width="44" />
+  </interface>
+  <interface name="tx_dataout_valid" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="tx_dataout_valid" direction="output" role="export" width="1" />
+  </interface>
+  <interface name="tx_dataout" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port
+       name="tx_dataout"
+       direction="output"
+       role="tx_parallel_data"
+       width="80" />
+  </interface>
+  <interface name="tx_pclk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="tx_pclk" direction="input" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="sdi_tx_sys_tx_sdi" version="1.0" name="sdi_tx_sys_tx_sdi">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria 10" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_TX_PCLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_TX_PCLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="AUTO_TX_PCLK_CLOCK_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\synth\sdi_tx_sys_tx_sdi.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\synth\sdi_tx_sys_tx_sdi.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/clt/Desktop/U_12G_SDI/U_3GSDIx4_OUT_PCB1.0_v0.07_250815/U_3GSDIx4_OUT_PCB1.0_v0.07_250107/src/sdi_out/sdi_driver/tx/ip/sdi_tx_sys/sdi_tx_sys_tx_sdi.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii/sdi_ii_hw.tcl" />
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_protocol/sdi_ii_tx_protocol_hw.tcl" />
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_phy_mgmt/sdi_ii_tx_phy_mgmt_hw.tcl" />
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_tx_sys_tx_sdi"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_protocol"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_phy_mgmt"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="sdi_ii"
+   version="19.3.0"
+   name="sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi">
+  <parameter name="PIXELS_PER_CLOCK" value="2" />
+  <parameter name="TX_HD_2X_OVERSAMPLING" value="0" />
+  <parameter name="VIDEO_STANDARD" value="mr" />
+  <parameter name="TEST_RESET_SEQ" value="0" />
+  <parameter name="TEST_LN_OUTPUT" value="1" />
+  <parameter name="TX_EN_VPID_INSERT" value="0" />
+  <parameter name="TEST_GEN_VPID" value="0" />
+  <parameter name="RX_CORECLK_FREQ_HZ" value="148500000" />
+  <parameter name="ED_TXPLL_SWITCH" value="0" />
+  <parameter name="ENABLE_ED_FILESET_SIM" value="1" />
+  <parameter name="TEST_RESET_RECON" value="0" />
+  <parameter name="SELECT_CUSTOM_DEVICE" value="0" />
+  <parameter name="ED_TXPLL_TYPE" value="fPLL" />
+  <parameter name="ENABLE_ED_FILESET_SYNTHESIS" value="1" />
+  <parameter name="TEST_SYNC_OUTPUT" value="1" />
+  <parameter name="AXIS_VIDEOIF_EN" value="0" />
+  <parameter name="DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="TEST_GEN_ANC" value="0" />
+  <parameter name="DIE_REVISIONS" value="" />
+  <parameter name="TEST_VPID_OVERWRITE" value="1" />
+  <parameter name="INTERNAL_TEST" value="0" />
+  <parameter name="RX_EN_A2B_CONV" value="0" />
+  <parameter name="TEST_DL_SYNC" value="0" />
+  <parameter name="TEST_FRAME_LOCKED" value="0" />
+  <parameter name="TEST_SERIAL_DELAY" value="0" />
+  <parameter name="RX_EN_VPID_EXTRACT" value="0" />
+  <parameter name="RX_CORECLK_FREQ" value="148.5" />
+  <parameter name="SELECT_DAUGHTER_CARD" value="0" />
+  <parameter name="TEST_DISTURB_SERIAL" value="0" />
+  <parameter name="BPS" value="12" />
+  <parameter name="TEST_VPID_PKT_COUNT" value="1" />
+  <parameter name="TEST_TRS_LOCKED" value="0" />
+  <parameter name="RX_EN_B2A_CONV" value="0" />
+  <parameter name="FAMILY" value="Arria 10" />
+  <parameter name="SELECT_SUPPORTED_VARIANT" value="1" />
+  <parameter name="TEST_ERR_VPID" value="0" />
+  <parameter name="ED_DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="NUMBER_OF_COLOR_PLANES" value="3" />
+  <parameter name="SD_BIT_WIDTH" value="10" />
+  <parameter name="RX_CRC_ERROR_OUTPUT" value="0" />
+  <parameter name="TEST_RXSAMPLE_CHK" value="0" />
+  <parameter name="TEST_MULTI_RECON" value="0" />
+  <parameter name="DIRECTION" value="tx" />
+  <parameter name="TEST_RST_PRE_OW" value="0" />
+  <parameter name="SELECT_ED_FILESET" value="VERILOG" />
+  <parameter name="DIE_TYPES" value="" />
+  <parameter name="SELECT_TARGETED_BOARD" value="0" />
+  <parameter name="TEST_RECONFIG_SEQ" value="full" />
+  <parameter name="BASE_DEVICE" value="NIGHTFURY3" />
+  <parameter name="TEST_DATA_COMPARE" value="0" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="RX_INC_ERR_TOLERANCE" value="0" />
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_1930\synth\sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_1930\synth\sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii/sdi_ii_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_protocol/sdi_ii_tx_protocol_hw.tcl" />
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_phy_mgmt/sdi_ii_tx_phy_mgmt_hw.tcl" />
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="sdi_tx_sys_tx_sdi" as="tx_sdi" />
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_protocol"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_phy_mgmt"</message>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+ <entity kind="sdi_ii_tx_protocol" version="19.3.0" name="sdi_ii_tx_protocol">
+  <parameter name="RX_CORECLK_FREQ" value="148.5" />
+  <parameter name="SELECT_DAUGHTER_CARD" value="0" />
+  <parameter name="PIXELS_PER_CLOCK" value="2" />
+  <parameter name="TX_HD_2X_OVERSAMPLING" value="0" />
+  <parameter name="BPS" value="12" />
+  <parameter name="VIDEO_STANDARD" value="mr" />
+  <parameter name="RX_EN_B2A_CONV" value="0" />
+  <parameter name="FAMILY" value="Arria 10" />
+  <parameter name="TX_EN_VPID_INSERT" value="0" />
+  <parameter name="RX_CORECLK_FREQ_HZ" value="148500000" />
+  <parameter name="SELECT_SUPPORTED_VARIANT" value="1" />
+  <parameter name="ED_TXPLL_SWITCH" value="0" />
+  <parameter name="ED_DEVICE" value="Unknown" />
+  <parameter name="ENABLE_ED_FILESET_SIM" value="1" />
+  <parameter name="NUMBER_OF_COLOR_PLANES" value="3" />
+  <parameter name="SD_BIT_WIDTH" value="10" />
+  <parameter name="RX_CRC_ERROR_OUTPUT" value="0" />
+  <parameter name="SELECT_CUSTOM_DEVICE" value="0" />
+  <parameter name="ED_TXPLL_TYPE" value="fPLL" />
+  <parameter name="ENABLE_ED_FILESET_SYNTHESIS" value="1" />
+  <parameter name="DIRECTION" value="tx" />
+  <parameter name="AXIS_VIDEOIF_EN" value="0" />
+  <parameter name="DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="SELECT_ED_FILESET" value="VERILOG" />
+  <parameter name="DIE_REVISIONS" value="" />
+  <parameter name="DIE_TYPES" value="" />
+  <parameter name="SELECT_TARGETED_BOARD" value="0" />
+  <parameter name="BASE_DEVICE" value="NIGHTFURY3" />
+  <parameter name="RX_INC_ERR_TOLERANCE" value="0" />
+  <parameter name="RX_EN_A2B_CONV" value="0" />
+  <parameter name="RX_EN_VPID_EXTRACT" value="0" />
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_tx_protocol.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_hd_crc.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_hd_insert_ln.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_scrambler.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_transmit.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_vpid_insert.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_trsmatch.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_sd_bits_conv.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_sync_bit_ins.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_tx_protocol.ocp"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_tx_protocol.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_hd_crc.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_hd_insert_ln.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_scrambler.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_transmit.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_vpid_insert.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_trsmatch.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_sd_bits_conv.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_sync_bit_ins.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_protocol_1930\synth\sdi_ii_tx_protocol.ocp"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_protocol/sdi_ii_tx_protocol_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi"
+     as="u_tx_protocol" />
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_protocol"</message>
+  </messages>
+ </entity>
+ <entity kind="sdi_ii_tx_phy_mgmt" version="19.3.0" name="sdi_ii_tx_phy_mgmt">
+  <parameter name="RX_CORECLK_FREQ" value="148.5" />
+  <parameter name="SELECT_DAUGHTER_CARD" value="0" />
+  <parameter name="PIXELS_PER_CLOCK" value="2" />
+  <parameter name="TX_HD_2X_OVERSAMPLING" value="0" />
+  <parameter name="BPS" value="12" />
+  <parameter name="VIDEO_STANDARD" value="mr" />
+  <parameter name="RX_EN_B2A_CONV" value="0" />
+  <parameter name="FAMILY" value="Arria 10" />
+  <parameter name="TX_EN_VPID_INSERT" value="0" />
+  <parameter name="RX_CORECLK_FREQ_HZ" value="148500000" />
+  <parameter name="SELECT_SUPPORTED_VARIANT" value="1" />
+  <parameter name="ED_TXPLL_SWITCH" value="0" />
+  <parameter name="ED_DEVICE" value="Unknown" />
+  <parameter name="ENABLE_ED_FILESET_SIM" value="1" />
+  <parameter name="NUMBER_OF_COLOR_PLANES" value="3" />
+  <parameter name="SD_BIT_WIDTH" value="10" />
+  <parameter name="RX_CRC_ERROR_OUTPUT" value="0" />
+  <parameter name="SELECT_CUSTOM_DEVICE" value="0" />
+  <parameter name="ED_TXPLL_TYPE" value="fPLL" />
+  <parameter name="ENABLE_ED_FILESET_SYNTHESIS" value="1" />
+  <parameter name="DIRECTION" value="tx" />
+  <parameter name="AXIS_VIDEOIF_EN" value="0" />
+  <parameter name="DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="SELECT_ED_FILESET" value="VERILOG" />
+  <parameter name="DIE_REVISIONS" value="" />
+  <parameter name="DIE_TYPES" value="" />
+  <parameter name="SELECT_TARGETED_BOARD" value="0" />
+  <parameter name="BASE_DEVICE" value="NIGHTFURY3" />
+  <parameter name="RX_INC_ERR_TOLERANCE" value="0" />
+  <parameter name="RX_EN_A2B_CONV" value="0" />
+  <parameter name="RX_EN_VPID_EXTRACT" value="0" />
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_phy_mgmt.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_sample.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_xcvr_interface.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_ce_gen.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_phy_mgmt.ocp"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_phy_mgmt.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_sample.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_xcvr_interface.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_ce_gen.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\sdi_ii_tx_phy_mgmt_1930\synth\sdi_ii_tx_phy_mgmt.ocp"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/sdi_ii/sdi_ii_library/sdi_ii_tx_phy_mgmt/sdi_ii_tx_phy_mgmt_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi"
+     as="u_tx_phy_mgmt" />
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: sdi_ii_tx_phy_mgmt"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_reset_controller"
+   version="19.2.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_controller.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_sdi\altera_reset_controller_1921\synth\altera_reset_controller.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelfpga_pro/22.2/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="sdi_tx_sys_tx_sdi_sdi_ii_1930_3m232fi"
+     as="rst_controller" />
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_sdi">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,7 @@
+	component clk_io is
+		port (
+			inclk  : in  std_logic := 'X'; -- clk
+			outclk : out std_logic         -- clk
+		);
+	end component clk_io;
+

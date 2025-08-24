@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.08.20.21:04:59"
+ outputDirectory="C:/Users/clt/Desktop/U_12G_SDI/U_3GSDIx4_OUT_PCB1.0_v0.07_250815/U_3GSDIx4_OUT_PCB1.0_v0.07_250107/src/sdi_out/sdi_driver/tx/ip/sdi_tx_sys/sdi_tx_sys_tx_core_rst/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Arria 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10AX048H3F34E2SG"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="in_reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="in_reset" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="out_reset" kind="reset" start="1">
+   <property name="associatedClock" value="" />
+   <property name="associatedDirectReset" value="in_reset" />
+   <property name="associatedResetSinks" value="in_reset" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="out_reset" direction="output" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   kind="sdi_tx_sys_tx_core_rst"
+   version="1.0"
+   name="sdi_tx_sys_tx_core_rst">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="10AX048H3F34E2SG" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria 10" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_core_rst\synth\sdi_tx_sys_tx_core_rst.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\clt\Desktop\U_12G_SDI\U_3GSDIx4_OUT_PCB1.0_v0.07_250815\U_3GSDIx4_OUT_PCB1.0_v0.07_250107\src\sdi_out\sdi_driver\tx\ip\sdi_tx_sys\sdi_tx_sys_tx_core_rst\synth\sdi_tx_sys_tx_core_rst.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/clt/Desktop/U_12G_SDI/U_3GSDIx4_OUT_PCB1.0_v0.07_250815/U_3GSDIx4_OUT_PCB1.0_v0.07_250107/src/sdi_out/sdi_driver/tx/ip/sdi_tx_sys/sdi_tx_sys_tx_core_rst.ip" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <messages>
+   <message level="Info" culprit="sdi_tx_sys_tx_core_rst">"Generating: sdi_tx_sys_tx_core_rst"</message>
+  </messages>
+ </entity>
+</deploy>

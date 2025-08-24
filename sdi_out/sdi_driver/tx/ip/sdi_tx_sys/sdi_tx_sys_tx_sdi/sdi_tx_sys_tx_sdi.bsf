@@ -1,0 +1,170 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 320 568)
+	(text "sdi_tx_sys_tx_sdi" (rect 100 0 174 12)(font "SansSerif" (font_size 11)))
+	(text "inst" (rect 8 552 20 564)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "tx_rst" (rect 0 0 23 12)(font "SansSerif" (font_size 8)))
+		(text "tx_rst" (rect 4 65 40 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "tx_datain_valid" (rect 0 0 59 12)(font "SansSerif" (font_size 8)))
+		(text "tx_datain_valid" (rect 4 115 94 126)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "tx_trs" (rect 0 0 23 12)(font "SansSerif" (font_size 8)))
+		(text "tx_trs" (rect 4 165 40 176)(font "SansSerif" (font_size 8)))
+		(line (pt 0 176)(pt 102 176)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "tx_std[2..0]" (rect 0 0 44 12)(font "SansSerif" (font_size 8)))
+		(text "tx_std[2..0]" (rect 4 215 76 226)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "tx_enable_ln" (rect 0 0 49 12)(font "SansSerif" (font_size 8)))
+		(text "tx_enable_ln" (rect 4 265 76 276)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "tx_enable_crc" (rect 0 0 56 12)(font "SansSerif" (font_size 8)))
+		(text "tx_enable_crc" (rect 4 315 82 326)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 376)
+		(input)
+		(text "tx_datain[79..0]" (rect 0 0 60 12)(font "SansSerif" (font_size 8)))
+		(text "tx_datain[79..0]" (rect 4 365 100 376)(font "SansSerif" (font_size 8)))
+		(line (pt 0 376)(pt 102 376)(line_width 3))
+	)
+	(port
+		(pt 0 424)
+		(input)
+		(text "tx_ln[43..0]" (rect 0 0 44 12)(font "SansSerif" (font_size 8)))
+		(text "tx_ln[43..0]" (rect 4 415 76 426)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 472)
+		(input)
+		(text "tx_ln_b[43..0]" (rect 0 0 55 12)(font "SansSerif" (font_size 8)))
+		(text "tx_ln_b[43..0]" (rect 4 465 88 476)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 520)
+		(input)
+		(text "tx_pclk" (rect 0 0 28 12)(font "SansSerif" (font_size 8)))
+		(text "tx_pclk" (rect 4 515 46 526)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 320 72)
+		(output)
+		(text "tx_dataout_valid" (rect 0 0 64 12)(font "SansSerif" (font_size 8)))
+		(text "tx_dataout_valid" (rect 240 65 336 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 320 120)
+		(output)
+		(text "tx_dataout[79..0]" (rect 0 0 66 12)(font "SansSerif" (font_size 8)))
+		(text "tx_dataout[79..0]" (rect 239 115 341 126)(font "SansSerif" (font_size 8)))
+	)
+	(drawing
+		(text "tx_rst" (rect 69 46 174 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 107 71 244 152)(font "SansSerif" (color 0 0 0)))
+		(text "tx_datain_valid" (rect 16 96 122 205)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 121 250 252)(font "SansSerif" (color 0 0 0)))
+		(text "tx_trs" (rect 69 146 174 305)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 171 250 352)(font "SansSerif" (color 0 0 0)))
+		(text "tx_std" (rect 67 196 170 405)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 221 250 452)(font "SansSerif" (color 0 0 0)))
+		(text "tx_enable_ln" (rect 29 246 130 505)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 271 250 552)(font "SansSerif" (color 0 0 0)))
+		(text "tx_enable_crc" (rect 22 296 122 605)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 321 250 652)(font "SansSerif" (color 0 0 0)))
+		(text "tx_datain" (rect 50 346 154 705)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 371 250 752)(font "SansSerif" (color 0 0 0)))
+		(text "tx_ln" (rect 75 396 180 805)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 421 250 852)(font "SansSerif" (color 0 0 0)))
+		(text "tx_ln_b" (rect 60 446 162 905)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 107 471 250 952)(font "SansSerif" (color 0 0 0)))
+		(text "tx_dataout_valid" (rect 222 46 540 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 191 71 418 152)(font "SansSerif" (color 0 0 0)))
+		(text "tx_dataout" (rect 222 96 504 205)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "tx_parallel_data" (rect 150 121 396 252)(font "SansSerif" (color 0 0 0)))
+		(text "tx_pclk" (rect 62 496 166 1005)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 107 521 232 1052)(font "SansSerif" (color 0 0 0)))
+		(text " sdi_tx_sys_tx_sdi " (rect 240 551 594 1112)(font "SansSerif" ))
+		(line (pt 102 34)(pt 221 34)(line_width 1))
+		(line (pt 221 34)(pt 221 551)(line_width 1))
+		(line (pt 102 551)(pt 221 551)(line_width 1))
+		(line (pt 102 34)(pt 102 551)(line_width 1))
+		(line (pt 0 76)(pt 102 76)(line_width 1))
+		(line (pt 103 55)(pt 103 80)(line_width 1))
+		(line (pt 104 55)(pt 104 80)(line_width 1))
+		(line (pt 0 126)(pt 102 126)(line_width 1))
+		(line (pt 103 105)(pt 103 130)(line_width 1))
+		(line (pt 104 105)(pt 104 130)(line_width 1))
+		(line (pt 103 155)(pt 103 180)(line_width 1))
+		(line (pt 104 155)(pt 104 180)(line_width 1))
+		(line (pt 0 226)(pt 102 226)(line_width 3))
+		(line (pt 103 205)(pt 103 230)(line_width 1))
+		(line (pt 104 205)(pt 104 230)(line_width 1))
+		(line (pt 0 276)(pt 102 276)(line_width 1))
+		(line (pt 103 255)(pt 103 280)(line_width 1))
+		(line (pt 104 255)(pt 104 280)(line_width 1))
+		(line (pt 0 326)(pt 102 326)(line_width 1))
+		(line (pt 103 305)(pt 103 330)(line_width 1))
+		(line (pt 104 305)(pt 104 330)(line_width 1))
+		(line (pt 103 355)(pt 103 380)(line_width 1))
+		(line (pt 104 355)(pt 104 380)(line_width 1))
+		(line (pt 0 426)(pt 102 426)(line_width 3))
+		(line (pt 103 405)(pt 103 430)(line_width 1))
+		(line (pt 104 405)(pt 104 430)(line_width 1))
+		(line (pt 0 476)(pt 102 476)(line_width 3))
+		(line (pt 103 455)(pt 103 480)(line_width 1))
+		(line (pt 104 455)(pt 104 480)(line_width 1))
+		(line (pt 323 76)(pt 221 76)(line_width 1))
+		(line (pt 220 55)(pt 220 80)(line_width 1))
+		(line (pt 219 55)(pt 219 80)(line_width 1))
+		(line (pt 323 126)(pt 221 126)(line_width 3))
+		(line (pt 220 105)(pt 220 130)(line_width 1))
+		(line (pt 219 105)(pt 219 130)(line_width 1))
+		(line (pt 0 526)(pt 102 526)(line_width 1))
+		(line (pt 103 505)(pt 103 530)(line_width 1))
+		(line (pt 104 505)(pt 104 530)(line_width 1))
+		(line (pt 0 0)(pt 323 0)(line_width 1))
+		(line (pt 323 0)(pt 323 568)(line_width 1))
+		(line (pt 0 568)(pt 323 568)(line_width 1))
+		(line (pt 0 0)(pt 0 568)(line_width 1))
+	)
+)

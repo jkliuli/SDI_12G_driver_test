@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_reset_controller_1921/sim/altera_reset_controller.v"
+   type="VERILOG"
+   library="altera_reset_controller_1921" />
+ <file
+   path="altera_reset_controller_1921/sim/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="altera_reset_controller_1921" />
+ <file
+   path="altera_reset_controller_1921/sim/altera_reset_controller.sdc"
+   type="SDC_ENTITY"
+   library="altera_reset_controller_1921" />
+ <file
+   path="sim/sdi_tx_sys.v"
+   type="VERILOG"
+   library="sdi_tx_sys"
+   hasInlineConfiguration="true" />
+ <topLevel name="sdi_tx_sys.sdi_tx_sys" />
+ <deviceFamily name="arria10" />
+ <device name="10AX048H3F34E2SG" />
+</simPackage>

@@ -1,0 +1,7 @@
+	component clkctrl is
+		port (
+			inclk  : in  std_logic := 'X'; -- clk
+			outclk : out std_logic         -- clk
+		);
+	end component clkctrl;
+

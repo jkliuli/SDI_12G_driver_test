@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/twentynm_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor/twentynm_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_xcvr_fpll_a10_191"
+   simulator="modelsim" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_xcvr_fpll_a10_191"
+   simulator="modelsim" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/altera_xcvr_fpll_a10.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor/altera_xcvr_fpll_a10.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_xcvr_fpll_a10_191"
+   simulator="modelsim" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/a10_avmm_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/alt_xcvr_native_avmm_nf.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/alt_xcvr_pll_embedded_debug.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/alt_xcvr_pll_avmm_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_pll_embedded_debug.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_xcvr_fpll_a10_191"
+   simulator="modelsim" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor/alt_xcvr_pll_avmm_csr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_xcvr_fpll_a10_191"
+   simulator="modelsim" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/plain_files.txt"
+   type="OTHER"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/mentor_files.txt"
+   type="OTHER"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/cadence_files.txt"
+   type="OTHER"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/synopsys_files.txt"
+   type="OTHER"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="altera_xcvr_fpll_a10_191/sim/aldec_files.txt"
+   type="OTHER"
+   library="altera_xcvr_fpll_a10_191" />
+ <file
+   path="sim/tx_pll.v"
+   type="VERILOG"
+   library="tx_pll"
+   hasInlineConfiguration="true" />
+ <topLevel name="tx_pll.tx_pll" />
+ <deviceFamily name="arria10" />
+ <device name="10AX048H3F34E2SG" />
+</simPackage>

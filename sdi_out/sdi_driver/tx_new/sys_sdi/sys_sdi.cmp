@@ -1,0 +1,6 @@
+	component sys_sdi is
+		port (
+			reset_reset : in std_logic := 'X'  -- reset
+		);
+	end component sys_sdi;
+

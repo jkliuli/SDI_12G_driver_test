@@ -1,0 +1,28 @@
+# system info sdi_tx_sys on 2025.08.19.16:13:06
+system_info:
+name,value
+DEVICE,10AX048H3F34E2SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for sdi_tx_sys on 2025.08.19.16:13:06
+files:
+filepath,kind,attributes,module,is_top
+sim/sdi_tx_sys.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,sdi_tx_sys,true
+altera_reset_controller_1921/sim/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+altera_reset_controller_1921/sim/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+altera_reset_controller_1921/sim/altera_reset_controller.sdc,SDC_ENTITY,NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+sdi_tx_sys.tx_core_rst,sdi_tx_sys_tx_core_rst
+sdi_tx_sys.tx_phy,sdi_tx_sys_tx_phy
+sdi_tx_sys.tx_phy_reset,sdi_tx_sys_tx_phy_reset
+sdi_tx_sys.tx_phy_reset_0,sdi_tx_sys_tx_phy_reset_0
+sdi_tx_sys.tx_phy_rst_ctrl,sdi_tx_sys_tx_phy_rst_ctrl
+sdi_tx_sys.tx_phy_rst_ctrl_clk,sdi_tx_sys_tx_phy_rst_ctrl_clk
+sdi_tx_sys.tx_sdi,sdi_tx_sys_tx_sdi
+sdi_tx_sys.tx_sdi_clkout,sdi_tx_sys_tx_sdi_clkout
+sdi_tx_sys.rst_controller,altera_reset_controller

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altclkctrl_2000/sim/clkctrl_altclkctrl_2000_dpnsueq.v"
+   type="VERILOG"
+   library="altclkctrl_2000" />
+ <file
+   path="sim/clkctrl.v"
+   type="VERILOG"
+   library="clkctrl"
+   hasInlineConfiguration="true" />
+ <topLevel name="clkctrl.clkctrl" />
+ <deviceFamily name="arria10" />
+ <device name="10AX048H3F34E2SG" />
+</simPackage>

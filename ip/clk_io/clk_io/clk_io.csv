@@ -1,0 +1,18 @@
+# system info clk_io on 2025.01.21.13:51:41
+system_info:
+name,value
+DEVICE,10AX048H3F34E2SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for clk_io on 2025.01.21.13:51:41
+files:
+filepath,kind,attributes,module,is_top
+sim/clk_io.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,clk_io,true
+altclkctrl_2000/sim/clk_io_altclkctrl_2000_dpnsueq.v,VERILOG,,clk_io_altclkctrl_2000_dpnsueq,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+clk_io.altclkctrl_0,clk_io_altclkctrl_2000_dpnsueq

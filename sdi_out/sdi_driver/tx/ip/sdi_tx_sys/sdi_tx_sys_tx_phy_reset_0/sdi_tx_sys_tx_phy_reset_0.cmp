@@ -1,0 +1,8 @@
+	component sdi_tx_sys_tx_phy_reset_0 is
+		port (
+			clk       : in  std_logic := 'X'; -- clk
+			in_reset  : in  std_logic := 'X'; -- reset
+			out_reset : out std_logic         -- reset
+		);
+	end component sdi_tx_sys_tx_phy_reset_0;
+
