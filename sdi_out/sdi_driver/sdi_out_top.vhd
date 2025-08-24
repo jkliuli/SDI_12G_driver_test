@@ -63,7 +63,7 @@ signal sdi_clk                          : std_logic:= '0';
 signal tx_enable                        : std_logic;
 
 signal ntsc_paln                        : std_logic:= '0';
-signal format_select                    : std_logic_vector(3 downto 0):= "1100"; --1080p60
+signal format_select                    : std_logic_vector(4 downto 0):= "01100"; --1080p60
 signal tx_std                           : std_logic_vector(2 downto 0):= "101"; --3G A
 
 
@@ -257,7 +257,7 @@ port(
     pdata								: in  std_logic_vector(7 downto 0);
 
     --for test 
-    format_select                       : in std_logic_vector(3 downto 0); --1080p60
+    format_select                       : in std_logic_vector(4 downto 0); --1080p60
     tx_std                              : in std_logic_vector(2 downto 0); --3G A
     ntsc_paln                           : in std_logic; --1/1.001 flag
 

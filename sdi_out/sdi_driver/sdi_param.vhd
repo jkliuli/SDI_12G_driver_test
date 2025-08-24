@@ -30,7 +30,7 @@ port(
 	pdata								: in  std_logic_vector(7 downto 0);
 
     --for test
-    format_select                       : in std_logic_vector(3 downto 0);
+    format_select                       : in std_logic_vector(4 downto 0);
     tx_std                              : in std_logic_vector(2 downto 0);
     ntsc_paln                           : in std_logic; 
 
@@ -115,7 +115,7 @@ signal chroma_b_set_value               : std_logic_vector(7 downto 0);
 
 signal format_bt601_en_sys              : std_logic_vector(2 downto 0); --colormetiry input defualt 0
 
-TYPE   arrray_16_187bit is array (15 downto 0) of std_logic_vector(186 downto 0);
+TYPE   arrray_16_187bit is array (21 downto 0) of std_logic_vector(186 downto 0);
 signal format_test                      : arrray_16_187bit;
 signal index_format                     : integer := 12;  
 
@@ -380,13 +380,13 @@ begin
             conv_std_logic_vector(5, 8)                          &  -- 8'hC7
             conv_std_logic_vector(9, 11)                         &  -- 11'd10
             conv_std_logic_vector(322, 11);                           -- 11'd0 --3GA(60/59.94)
-        --1035i ---not use
+        --6G 1920x1080p 30/29.7 used
         format_test(2)(186 downto 0) <= 
             conv_std_logic_vector(0, 8)                          &  -- 8'd0
-            conv_std_logic_vector(268, 12)                       &  -- 12'd268
+            conv_std_logic_vector(2468, 12)                      &  -- 12'd268
             conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
             conv_std_logic_vector(1920, 13)                      &  -- 13'd1920
-            conv_std_logic_vector(2200, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(4400, 13)                      &  -- 13'd2200
             conv_std_logic_vector(0, 11)                         &  -- 11'd0
             conv_std_logic_vector(0, 11)                         &  -- 11'd0
             conv_std_logic_vector(42, 11)                        &  -- 11'd42
@@ -396,30 +396,30 @@ begin
             conv_std_logic_vector(581, 11)                       &  -- 11'd581
             conv_std_logic_vector(0, 11)                         &  -- 11'd0
             conv_std_logic_vector(5, 4)                          &  -- 4'h5
-            conv_std_logic_vector(0, 4)                          &  -- 4'h9
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
             conv_std_logic_vector(12, 4)                         &  -- 4'hC
-            conv_std_logic_vector(199, 8)                        &  -- 8'hC7
+            conv_std_logic_vector(199, 8)                        &  -- 8'hC7 --30
             conv_std_logic_vector(10, 11)                        &  -- 11'd10
-            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
-        --1080i50 ----not use
+            conv_std_logic_vector(0, 11);                           -- 11'd0 
+        --6G 1920x1080p 24/23.9
         format_test(3)(186 downto 0) <= 
             conv_std_logic_vector(0, 8)                          &  --   sd_hanc_y_word  8'd0             
-            conv_std_logic_vector(444, 12)                       &  --   hanc_word  12'd268
-            conv_std_logic_vector(1250, 11)                      &  --   line_per_frame  11'd1125
+            conv_std_logic_vector(3568, 12)                      &  --   hanc_word  12'd268
+            conv_std_logic_vector(1125, 11)                      &  --   line_per_frame  11'd1125
             conv_std_logic_vector(1920, 13)                      &  --   active_line  13'd1920
-            conv_std_logic_vector(2376, 13)                      &  --   total_line  13'd2200
-            conv_std_logic_vector(626, 11)                       &  --   f_rise_line   11'd0
-            conv_std_logic_vector(1, 11)                         &  --   f_fall_line  11'd0
-            conv_std_logic_vector(81, 11)                        &  --   v_fall_line1  11'd42
+            conv_std_logic_vector(5500, 13)                      &  --   total_line  13'd2200
+            conv_std_logic_vector(0, 11)                         &  --   f_rise_line   11'd0
+            conv_std_logic_vector(0, 11)                         &  --   f_fall_line  11'd0
+            conv_std_logic_vector(42, 11)                        &  --   v_fall_line1  11'd42
             conv_std_logic_vector(1122, 11)                      &  --   v_rise_line1  11'd1122
             conv_std_logic_vector(0, 11)                         &  --   v_fall_line2  11'd0
             conv_std_logic_vector(0, 11)                         &  --   v_rise_line2  11'd0
             conv_std_logic_vector(581, 11)                       &  --   patho_change_line_1  11'd581
             conv_std_logic_vector(0, 11)                         &  --   patho_change_line_2    11'd0
             conv_std_logic_vector(5, 4)                          &  --   vpid_byte1 HD    42bi  4'h5
-            conv_std_logic_vector(0, 4)                          &  --   vpid_byte1 3GA  4'h9
+            conv_std_logic_vector(9, 4)                          &  --   vpid_byte1 3GA  4'h9
             conv_std_logic_vector(12, 4)                         &  --   vpid_byte1 3GB  4'hC
-            conv_std_logic_vector(199, 8)                        &  --   vpid_byte2   8'hC7
+            conv_std_logic_vector(195, 8)                        &  --   vpid_byte2   8'hC3
             conv_std_logic_vector(10, 11)                        &  --   vpid_ln_h  11'd10
             conv_std_logic_vector(0, 11);                           --   vpid_ln_l  11'd0 --3GA(60/59.94)
         --1980x1080i 60/59.94  used
@@ -632,29 +632,155 @@ begin
             conv_std_logic_vector(197, 8)                        &  --   vpid_byte2   8'hc5
             conv_std_logic_vector(10, 11)                        &  --   vpid_ln_h  11'd10
             conv_std_logic_vector(0, 11);                           --   vpid_ln_l  11'd0 --3GA(60/59.94)
-        --1080sf24/23.98 notused
+        --6G 1920x1080p 25 used
         format_test(14)(186 downto 0) <= 
             conv_std_logic_vector(0, 8)                          &  -- 8'd0
-            conv_std_logic_vector(818, 12)                       &  -- 12'd268
+            conv_std_logic_vector(3348, 12)                      &  -- 12'd268
             conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
             conv_std_logic_vector(1920, 13)                      &  -- 13'd1920
-            conv_std_logic_vector(2750, 13)                      &  -- 13'd2200
-            conv_std_logic_vector(564, 11)                       &  -- 11'd0
-            conv_std_logic_vector(1, 11)                         &  -- 11'd0
-            conv_std_logic_vector(21, 11)                        &  -- 11'd42
-            conv_std_logic_vector(561, 11)                       &  -- 11'd1122
-            conv_std_logic_vector(584, 11)                       &  -- 11'd0
-            conv_std_logic_vector(1124, 11)                      &  -- 11'd0
-            conv_std_logic_vector(290, 11)                       &  -- 11'd581
-            conv_std_logic_vector(853, 11)                       &  -- 11'd0
+            conv_std_logic_vector(5280, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
             conv_std_logic_vector(5, 4)                          &  -- 4'h5
             conv_std_logic_vector(9, 4)                          &  -- 4'h9
             conv_std_logic_vector(12, 4)                         &  -- 4'hC
-            conv_std_logic_vector(67, 8)                         &  -- 8'h43
+            conv_std_logic_vector(197, 8)                        &  -- 8'hc5
             conv_std_logic_vector(10, 11)                        &  -- 11'd10
-            conv_std_logic_vector(572, 11);                           -- 11'd0 --3GA(60/59.94)
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
         --reserved not used
         format_test(15)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(0, 12)                         &  -- 12'd268
+            conv_std_logic_vector(0, 11)                         &  -- 11'd1125
+            conv_std_logic_vector(0, 13)                         &  -- 13'd1920
+            conv_std_logic_vector(0, 13)                         &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd42
+            conv_std_logic_vector(0, 11)                         &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 4)                          &  -- 4'h5
+            conv_std_logic_vector(0, 4)                          &  -- 4'h9
+            conv_std_logic_vector(0, 4)                          &  -- 4'hC
+            conv_std_logic_vector(0, 8)                          &  -- 8'hC7
+            conv_std_logic_vector(0, 11)                         &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --(2048x1080) p30/29.97 --6G
+        format_test(16)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(2340, 12)                      &  -- 12'd268
+            conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
+            conv_std_logic_vector(2048, 13)                      &  -- 13'd1920
+            conv_std_logic_vector(4400, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(5, 4)                          &  -- 4'h5
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
+            conv_std_logic_vector(12, 4)                         &  -- 4'hC
+            conv_std_logic_vector(199, 8)                        &  -- 8'hC7
+            conv_std_logic_vector(10, 11)                        &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --2048x1080 p24/23.98 --6G
+        format_test(17)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(3440, 12)                      &  -- 12'd268
+            conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
+            conv_std_logic_vector(2048, 13)                      &  -- 13'd1920
+            conv_std_logic_vector(5500, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(5, 4)                          &  -- 4'h5
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
+            conv_std_logic_vector(12, 4)                         &  -- 4'hC
+            conv_std_logic_vector(195, 8)                        &  -- 8'hC3
+            conv_std_logic_vector(10, 11)                        &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --2048x1080 p25  --6G
+        format_test(18)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(3220, 12)                      &  -- 12'd268
+            conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
+            conv_std_logic_vector(2048, 13)                      &  -- 13'd1920
+            conv_std_logic_vector(5280, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(5, 4)                          &  -- 4'h5
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
+            conv_std_logic_vector(12, 4)                         &  -- 4'hC
+            conv_std_logic_vector(197, 8)                        &  -- 8'hC5
+            conv_std_logic_vector(10, 11)                        &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --2048x1080 p60/59.94  --12G
+        format_test(19)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(140, 12)                       &  -- 12'd268
+            conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
+            conv_std_logic_vector(2048, 13)                      &  -- 13'd1920
+            conv_std_logic_vector(2200, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(5, 4)                          &  -- 4'h5
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
+            conv_std_logic_vector(12, 4)                         &  -- 4'hC
+            conv_std_logic_vector(203, 8)                        &  -- 8'hCB
+            conv_std_logic_vector(10, 11)                        &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --2048x1080 p50  --12G
+        format_test(20)(186 downto 0) <= 
+            conv_std_logic_vector(0, 8)                          &  -- 8'd0
+            conv_std_logic_vector(580, 12)                       &  -- 12'd268
+            conv_std_logic_vector(1125, 11)                      &  -- 11'd1125
+            conv_std_logic_vector(2048, 13)                      &  -- 13'd1920
+            conv_std_logic_vector(2640, 13)                      &  -- 13'd2200
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(42, 11)                        &  -- 11'd42
+            conv_std_logic_vector(1122, 11)                      &  -- 11'd1122
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(581, 11)                       &  -- 11'd581
+            conv_std_logic_vector(0, 11)                         &  -- 11'd0
+            conv_std_logic_vector(5, 4)                          &  -- 4'h5
+            conv_std_logic_vector(9, 4)                          &  -- 4'h9
+            conv_std_logic_vector(12, 4)                         &  -- 4'hC
+            conv_std_logic_vector(201, 8)                        &  -- 8'hC9
+            conv_std_logic_vector(10, 11)                        &  -- 11'd10
+            conv_std_logic_vector(0, 11);                           -- 11'd0 --3GA(60/59.94)
+        --reserved not used
+        format_test(21)(186 downto 0) <= 
             conv_std_logic_vector(0, 8)                          &  -- 8'd0
             conv_std_logic_vector(0, 12)                         &  -- 12'd268
             conv_std_logic_vector(0, 11)                         &  -- 11'd1125
@@ -684,22 +810,28 @@ begin
         index_format <= 12;
     elsif rising_edge(sdi_clk) then
         case format_select is
-            when "0000" => index_format <= 0; --sd    -- (1920/3840)x1080p30/29.97,60/59.94 
-            when "0001" => index_format <= 1; --sd
-            when "0010" => index_format <= 2; --1035i 
-            when "0011" => index_format <= 3; --1080i 50 not use
-            when "0100" => index_format <= 4; --1080i 60
-            when "0101" => index_format <= 5; --1080i 50 720p 60
-            when "0110" => index_format <= 6; --1080p 24/23.98
-            when "0111" => index_format <= 7; --720p 60/59.94
-            when "1000" => index_format <= 8; --720p 50 
-            when "1001" => index_format <= 9; --720p 30/29.97 
-            when "1010" => index_format <= 10;--720p 25
-            when "1011" => index_format <= 11;--720p 24/23.98 
-            when "1100" => index_format <= 12;--1080p 30/29.97 60/59.94
-            when "1101" => index_format <= 13;--1080p 25 /50
-            when "1110" => index_format <= 14;--1080sF24/23.98
-            when "1111" => index_format <= 15;--reserved
+            when "00000" => index_format <= 0; --sd     
+            when "00001" => index_format <= 1; --sd
+            when "00010" => index_format <= 2; --1080p 30/29.7 --6G
+            when "00011" => index_format <= 3; --1080p 24/23.9 --6G
+            when "00100" => index_format <= 4; --1080i 60
+            when "00101" => index_format <= 5; --1080i 50 720p 60
+            when "00110" => index_format <= 6; --1080p 24/23.98
+            when "00111" => index_format <= 7; --720p 60/59.94
+            when "01000" => index_format <= 8; --720p 50 
+            when "01001" => index_format <= 9; --720p 30/29.97 
+            when "01010" => index_format <= 10;--720p 25
+            when "01011" => index_format <= 11;--720p 24/23.98 
+            when "01100" => index_format <= 12;--1080p 30/29.97 60/59.94
+            when "01101" => index_format <= 13;--1080p 25 /50
+            when "01110" => index_format <= 14;--1080p 25 --6G
+            when "01111" => index_format <= 15;--reserved
+            when "10000" => index_format <= 16;--(2048x1080) p30/29.97 --6G
+            when "10001" => index_format <= 17;--(2048x1080) p24/23.98 --6G
+            when "10010" => index_format <= 18;--(2048x1080) p25       --6G
+            when "10011" => index_format <= 19;--(2048x1080) p60/59.94 --12G
+            when "10100" => index_format <= 20;--(2048x1080) p50       --12G
+            when "10101" => index_format <= 21;
             when others => index_format <= 12;
         end case;
     end if;
@@ -830,8 +962,8 @@ begin
         case tx_std is
             when "111" => int_vpid_byte2_a <= rdata2 & vpid_part;
             when "011" => int_vpid_byte2_a <= rdata2 & vpid_part;
-            when "100" => int_vpid_byte2_a <= rdata2 & vpid_part;
-            when "101" => int_vpid_byte2_a <= rdata2 & vpid_part;
+--            when "100" => int_vpid_byte2_a <= rdata2 & vpid_part;
+--            when "101" => int_vpid_byte2_a <= rdata2 & vpid_part;
             when others => int_vpid_byte2_a <= rdata2 & format_test(index_format)(25 downto 22);
         end case;
     end if;
